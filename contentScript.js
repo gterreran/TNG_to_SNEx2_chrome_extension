@@ -1,23 +1,14 @@
 (() => {
-    let currentObj = "";
     let title;
-    
-    chrome.runtime.onMessage.addListener((obj, sender, response) => {
-        const { type, value, objId } = obj;
-    
-        if (type === "NEW") {
-            currentObj = objId;
-            newObjLoaded();
-        }
-    
-    });
 
     const newObjLoaded = () => {
         const addBtnExists = document.getElementsByClassName("add-btn")[0];
         const titleEl = document.getElementsByClassName("title")[0];
         const title = titleEl.textContent.trim();
 
-        if (!addBtnExists) {
+        const urlElements = window.location.href.split("/");
+                
+        if (urlElements.length == 5 && !addBtnExists) {
             //const addBtn = document.createElement("img");
             const addBtn = document.createElement("button");
 
