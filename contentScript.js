@@ -25,7 +25,6 @@
             addBtn.className = "add-btn";
             //addBtn.title = "Click to add object to SNEx";
             addBtn.innerHTML = "Add to SNEx";
-            //addBtn.onclick = addNewObjHandler()
             
             titleEl.appendChild(addBtn);
             addBtn.addEventListener("click",function(){
@@ -45,4 +44,3 @@
     newObjLoaded();
 })();
 
-//https://test.supernova.exchange/create-target/?name=2020ppi&ra=15%3A03%3A49.96&dec=%7C%2B42%3A06%3A50.5
