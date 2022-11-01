@@ -4,31 +4,11 @@
     "description": "Create new object in SNEx from the TNS.",
     "permissions": ["storage", "tabs"],
     "host_permissions": ["https://*.wis-tns.org/object/*"],
-    "background": {
-      "service_worker": "background.js"
-    },
     "content_scripts": [
       {
         "matches": ["https://*.wis-tns.org/object/*"],
         "js": ["contentScript.js"]
       }
     ],
-    "web_accessible_resources": [
-      {
-        "resources": [
-          "assets/add.png"
-        ],
-        "matches": ["https://*.youtube.com/*"]
-      }
-    ],
-    "action": {
-      "default_icon": {
-        "16": "assets/ext-icon.png",
-        "24": "assets/ext-icon.png",
-        "32": "assets/ext-icon.png"
-      },
-      "default_title": "My YT Bookmarks",
-      "default_popup": "popup.html"
-    },
     "manifest_version": 3
 }
